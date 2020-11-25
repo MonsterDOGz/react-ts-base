@@ -1,0 +1,18 @@
+{
+  "files.eol": "\n",
+  "editor.tabSize": 2, // 一个制表符等于的空格数
+  "editor.formatOnSave": true, // 是否启动保存时格式化
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // 默认格式化程序
+  "editor.codeActionsOnSave": {
+    // 在保存时运行的代码操作类型。
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    // eslint 验证的范围
+    "javascript",
+    "javascriptreact",
+    "typescript", // ts
+    "typescriptreact" // tsx
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib" // tsdk
+}
