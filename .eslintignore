@@ -1,5 +1,4 @@
-src/assets
-src/icons
+src/stories
 public
-dist
+build
 node_modules
