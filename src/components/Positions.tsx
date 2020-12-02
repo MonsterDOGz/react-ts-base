@@ -1,10 +1,9 @@
 import { FC, useState, useEffect } from 'react';
 const Positions: FC = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [positions, setPositions] = useState({ x: 0, y: 0 });
   useEffect(() => {
-    console.log('effect');
     const handlerClick = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      setPositions({ x: e.clientX, y: e.clientY });
     };
     document.addEventListener('click', handlerClick);
     return () => {
@@ -13,7 +12,7 @@ const Positions: FC = () => {
   }, []);
   return (
     <p>
-      x: {position.x}, y: {position.y}
+      x: {positions.x}, y: {positions.y}
     </p>
   );
 };
