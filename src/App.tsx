@@ -6,13 +6,17 @@ import Positions from './components/Positions';
 import 'vikingship/dist/index.css';
 import { Button, Menu } from 'vikingship';
 import 'antd/dist/antd.css';
-import { Alert } from 'antd';
+import { Alert, Tabs } from 'antd';
 // import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 
 function App() {
   const onClose = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     console.log(e, 'I was closed.');
   };
+  const { TabPane } = Tabs;
+  function callback(key: string) {
+    console.log(key);
+  }
 
   return (
     <div className="App">
@@ -46,6 +50,37 @@ function App() {
             <Menu.Item>opened1</Menu.Item>
           </Menu.SubMenu>
         </Menu>
+        <Tabs onChange={callback} type="card">
+          <TabPane tab="Tab 1" key="1">
+            Content of Tab Pane 1
+          </TabPane>
+          <TabPane tab="Tab 2" key="2">
+            Content of Tab Pane 2
+          </TabPane>
+          <TabPane tab="Tab 3" key="3">
+            Content of Tab Pane 3
+          </TabPane>
+        </Tabs>
+        <Tabs defaultActiveKey="1" onChange={callback}>
+          <TabPane tab="Tab 1" key="1">
+            Content of Tab Pane 1
+          </TabPane>
+          <TabPane tab="Tab 2" key="2">
+            Content of Tab Pane 2
+          </TabPane>
+          <TabPane tab="Tab 3" key="3">
+            Content of Tab Pane 3
+          </TabPane>
+          <TabPane tab="Tab 4" key="4">
+            Content of Tab Pane 4
+          </TabPane>
+          <TabPane tab="Tab 5" key="5">
+            Content of Tab Pane 5
+          </TabPane>
+          <TabPane tab="Tab 6" key="6">
+            Content of Tab Pane 6
+          </TabPane>
+        </Tabs>
       </header>
     </div>
   );
